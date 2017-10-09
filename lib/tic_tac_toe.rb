@@ -56,6 +56,20 @@ class TicTacToe
     turn_count % 2 == 0 ? "X" : "O"
   end
 
+  def turn
+    puts "Please enter 1-9"
+    user_input = gets.strip
+    index = input_to_index(user_input)
+    if valid_move?(index)
+      move(index, current_player)
+      display_board
+    else
+      turn
+    end
+  end
+  
+    
+
   def won?
     WIN_COMBINATIONS.detect do |win_combo|
       @board[win_combo[0]] == @board[win_combo[1]] &&
