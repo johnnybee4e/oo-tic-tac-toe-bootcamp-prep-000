@@ -94,4 +94,17 @@ class TicTacToe
       @board[win_combination.first]
     end
   end
+
+  def play
+    until over?
+      turn
+
+      if won?
+        winner
+      elsif draw?
+        puts "Cat's game!"
+      end
+    end
+  end
+  
 end
