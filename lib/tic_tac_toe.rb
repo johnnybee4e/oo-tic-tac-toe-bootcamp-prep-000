@@ -80,5 +80,15 @@ class TicTacToe
   def full?
     full_board = @board.none?{|token| token == " " }
   end
+
+  def draw?
+    if full? && !won?
+      true
+    else
+      false
+    end
+  end
+
+
   
 end
