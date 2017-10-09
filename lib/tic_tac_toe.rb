@@ -23,8 +23,8 @@ class TicTacToe
   end
 
   def input_to_index(string)
-    user_input = gets.strip
-    input_to_index = user_input.to_i
+    user_input = gets.strip.to_i
+    input_to_index = user_input - 1
 
   end
 
