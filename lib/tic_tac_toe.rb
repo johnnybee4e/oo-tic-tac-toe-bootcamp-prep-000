@@ -68,8 +68,6 @@ class TicTacToe
       turn
     end
   end
-  
-
 
   def won?
     WIN_COMBINATIONS.detect do |win_combo|
@@ -79,6 +77,8 @@ class TicTacToe
     end
   end
 
-
-
+  def full?
+    full_board = @board.none?{|token| token == " " }
+  end
+  
 end
